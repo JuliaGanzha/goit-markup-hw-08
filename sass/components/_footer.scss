@@ -1,0 +1,192 @@
+.networks {
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+  }
+}
+
+.networks__title {
+  display: inline-block;
+
+  margin-bottom: 20px;
+
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.networks__list {
+  @extend %list;
+
+  display: flex;
+
+  @media screen and (max-width: 767px) {
+    justify-content: center;
+  }
+}
+
+.networks__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.networks__link {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.networks__icon {
+  fill: $primary-bg-color;
+
+  .networks__link:hover &,
+  .networks__link:focus & {
+    fill: $additional-background-color;
+  }
+}
+
+.address-block {
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 60px;
+    text-align: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 65px;
+  }
+}
+
+.footer__logo {
+  display: inline-block;
+
+  margin-bottom: 20px;
+
+  color: $primary-bg-color;
+}
+
+.adress {
+  font-style: normal;
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.adress__map {
+  margin-top: 0;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 9px;
+  }
+}
+
+.adress__list {
+  @extend %list;
+}
+
+.adress__item {
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}
+
+.adress__link {
+  color: rgba(255, 255, 255, 0.6);
+
+  text-decoration: none;
+
+  transition: color $transition-duration $timing-function;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.subscribe {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: 450px;
+  }
+}
+
+.subscribe__field {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    flex-direction: column;
+  }
+}
+
+.subscribe__input {
+  padding: 15px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+
+  background-color: $second-bg-color;
+
+  font-size: 16px;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.6);
+
+  transition: all $transition-duration $timing-function;
+
+  &::placeholder {
+    font-size: 16px;
+    line-height: 1.25;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  &:focus {
+    outline: transparent;
+    border: 1px solid currentColor;
+  }
+
+  &:not(:placeholder-shown):focus:valid {
+    color: green;
+    border-color: green;
+  }
+
+  &:not(:placeholder-shown):focus:invalid {
+    color: tomato;
+    border-color: tomato;
+  }
+
+  @media screen and (max-width: 767px) {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+    height: 50px;
+
+    margin-right: 12px;
+  }
+}
+
+.subscribe__btn {
+  display: flex;
+  align-items: center;
+
+  padding: 10px 28px;
+
+  @media screen and (max-width: 767px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.subscribe__icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+}
